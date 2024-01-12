@@ -23,7 +23,7 @@
     if (!preg_match('/[0-9]+/', $_POST['price'])) {
         echo '価格を数字で入力してください。';
     } else
-    if ($sql->execute([htmlspecialchars($_POST['name']),$_POST['price'],$_POST['id']])){
+    if ($sql->execute([htmlspecialchars($_POST['name']),$_POST['price']])){
         echo '更新に成功しました。';
     }else{
         echo '更新に失敗しました。';
