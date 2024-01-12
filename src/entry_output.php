@@ -40,7 +40,7 @@
         }
     ?>
     </table>
-    <form action="entry_input.php">
+    <form action="entry.php">
         <button type="submit">戻る</button>
     </form>
     <button onclick="location.href='top.php'">トップへ戻る</button>
