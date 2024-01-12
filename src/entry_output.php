@@ -15,14 +15,12 @@
 <body>
     <?php
         $pdo = new PDO($connect, USER, PASS);
-        $sql=$pdo->prepare('insert into tea(tea_id, tea_name, price) values(?, ?, ?)');
-        if(!preg_match('/^\d+$/',$_POST['id'])) {
-            echo '商品番号を入力して下さい。';
-        }else if(empty($_POST['tea_name'])){
+        $sql=$pdo->prepare('insert into tea(tea_name, price) values(?, ?)');
+        if(empty($_POST['name'])){
             echo '商品名を入力してください。';
         }else if(!preg_match('/^[0-9]+$/', $_POST['price'])) {
             echo '商品価格を整数で入力してください。';
-        }else if($sql->execute([$_POST['id'], $_POST['tea_name'],$_POST['price'] ])){
+        }else if($sql->execute($_POST['name'],$_POST['price'])){
             echo '<font color="red">追加に成功しました。</font>';
         }else{
             echo '<font color="red">追加に失敗しました。</font>';
