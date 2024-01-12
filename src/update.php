@@ -21,7 +21,7 @@
 	$sql->execute([$_POST['id']]);
 	foreach ($sql as $row) {
         echo '<tr>';
-		echo '<form action="top.php" method="post">';
+		echo '<form action="delete_output.php" method="post">';
         echo '<td> ';
 		echo '<input type="text" name="id" value="', $row['tea_id'], '">';
 		echo '</td> ';

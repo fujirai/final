@@ -33,7 +33,7 @@
         echo '</form>';
         echo '</td>';
         echo '<td>';
-        echo '<form action="ren6-8-delete.php" method="post">';
+        echo '<form action="delete.php" method="post">';
         echo '<input type="hidden" name="id" value="',$row['tea_id'],'">';
         echo '<button type="submit">削除</button>';
         echo '</form>';
