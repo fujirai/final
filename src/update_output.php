@@ -23,7 +23,7 @@
     if (!preg_match('/[0-9]+/', $_POST['price'])) {
         echo '価格を数字で入力してください。';
     } else
-    if ($sql->execute([htmlspecialchars($_POST['name']),$_POST['price']])){
+    if ($sql->execute([htmlspecialchars($_POST['name']),$_POST['price'],$_POST['id']])){
         echo '更新に成功しました。';
     }else{
         echo '更新に失敗しました。';
@@ -44,6 +44,7 @@ foreach ($pdo->query('select * from tea') as $row) {
 ?>
         </table>
         <button onclick="location.href='update.php'">更新画面へ戻る</button>
+        <br>
         <button onclick="location.href='top.php'">一覧画面へ戻る</button>
     </body>
 </html>
