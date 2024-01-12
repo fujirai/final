@@ -43,6 +43,7 @@ foreach ($pdo->query('select * from tea') as $row) {
 }
 ?>
         </table>
-        <button onclick="location.href='entry.php'">更新画面へ戻る</button>
+        <button onclick="location.href='update.php'">更新画面へ戻る</button>
+        <button onclick="location.href='top.php'">一覧画面へ戻る</button>
     </body>
 </html>
