@@ -14,7 +14,7 @@
 		<title>データ削除</title>
         <style>
             button{
-                margin:10px auto;
+                margin:10px 50%;
             }
         </style>
 	</head>
