@@ -56,7 +56,7 @@ input[type="submit"]:hover {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -66,5 +66,5 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #45a049;
 }
