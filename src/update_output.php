@@ -11,6 +11,7 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
+        <link href="css/top.css" rel="stylesheet">
 		<title>更新完了</title>
 	</head>
 	<body>
@@ -18,15 +19,15 @@
     $pdo=new PDO($connect, USER, PASS);
     $sql=$pdo->prepare('update tea set tea_name=?,price=? where tea_id=?');
     if (empty($_POST['name'])) {
-        echo '商品名を入力してください。';
+        echo '<h1>商品名を入力してください。</h1>';
     } else
     if (!preg_match('/[0-9]+/', $_POST['price'])) {
-        echo '価格を数字で入力してください。';
+        echo '<h1>価格を数字で入力してください。</h1>';
     } else
     if ($sql->execute([htmlspecialchars($_POST['name']),$_POST['price'],$_POST['id']])){
-        echo '更新に成功しました。';
+        echo '<h1>更新に成功しました。</h1>';
     }else{
-        echo '更新に失敗しました。';
+        echo '<h1>更新に失敗しました。</h1>';
     }    
 ?>
         <hr>

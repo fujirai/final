@@ -13,10 +13,8 @@
         <link href="css/top.css" rel="stylesheet">
 		<title>データ削除</title>
         <style>
-            body{
-                display: flex;
-            }
             button{
+                display: block;
                 text-align:center;
             }
         </style>

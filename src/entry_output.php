@@ -10,6 +10,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link href="css/top.css" rel="stylesheet">
         <title>追加完了</title>
     </head>
 <body>
@@ -17,13 +18,13 @@
         $pdo = new PDO($connect, USER, PASS);
         $sql=$pdo->prepare('insert into tea(tea_name, price) values(?, ?)');
         if(empty($_POST['name'])){
-            echo '商品名を入力してください。';
+            echo '<h1>商品名を入力してください。</h1>';
         }else if(!preg_match('/^[0-9]+$/', $_POST['price'])) {
-            echo '商品価格を整数で入力してください。';
+            echo '<h1>商品価格を整数で入力してください。</h1>';
         }else if($sql->execute([$_POST['name'],$_POST['price']])){
-            echo '<font color="red">追加に成功しました。</font>';
+            echo '<h1>追加に成功しました。</h1>';
         }else{
-            echo '<font color="red">追加に失敗しました。</font>';
+            echo '<h1>追加に失敗しました。</h1>';
         }
     ?>
     <br><hr><br>
