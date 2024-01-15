@@ -13,6 +13,13 @@
 		<meta charset="UTF-8">
         <link href="css/top.css" rel="stylesheet">
 		<title>更新完了</title>
+        <style>
+            button{
+                display: block;
+                margin:15px auto;
+                width:150px;
+            }
+        </style>
 	</head>
 	<body>
 <?php

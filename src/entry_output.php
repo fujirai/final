@@ -12,7 +12,14 @@
         <meta charset="UTF-8">
         <link href="css/top.css" rel="stylesheet">
         <title>追加完了</title>
-    </head>
+        <style>
+            button{
+                display: block;
+                margin:15px auto;
+                width:150px;
+            }
+        </style>    
+        </head>
 <body>
     <?php
         $pdo = new PDO($connect, USER, PASS);
