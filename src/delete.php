@@ -12,6 +12,11 @@
 		<meta charset="UTF-8">
         <link href="css/top.css" rel="stylesheet">
 		<title>データ削除</title>
+        <style>
+            button{
+                margin:10px auto;
+            }
+        </style>
 	</head>
 	<body>
 <?php
