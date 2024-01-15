@@ -15,7 +15,8 @@
         <style>
             button{
                 display: block;
-                text-align:center;
+                margin:15px auto;
+                width:100px;
             }
         </style>
 	</head>
