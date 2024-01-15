@@ -27,22 +27,18 @@
         echo '<td>', $row['tea_id'], '</td>';
         echo '<td>', $row['tea_name'], '</td>';
         echo '<td>', $row['price'], '</td>';
-        echo '<td>';
+        echo '</tr>';
+        echo '</table>';
         echo '<form action="update.php" method="post">';
         echo '<input type="hidden" name="id" value="',$row['tea_id'],'">';
         echo '<button type="submit">更新</button>';
         echo '</form>';
-        echo '</td>';
-        echo '<td>';
         echo '<form action="delete.php" method="post">';
         echo '<input type="hidden" name="id" value="',$row['tea_id'],'">';
         echo '<button type="submit">削除</button>';
         echo '</form>';
-        echo '</td>';
-        echo '</tr>';
         echo "\n";
     }
 ?>
-    </table>
     </body>
 </html>
