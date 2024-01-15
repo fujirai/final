@@ -2,6 +2,7 @@
 <html long="ja">
     <head>
         <meta charset="UTF-8">
+        <link href="css/entry.css" rel="stylesheet">
         <title>データ追加</title>
     </head>
     <body>
