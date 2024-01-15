@@ -20,7 +20,7 @@
             echo '商品名を入力してください。';
         }else if(!preg_match('/^[0-9]+$/', $_POST['price'])) {
             echo '商品価格を整数で入力してください。';
-        }else if($sql->execute($_POST['name'],$_POST['price'])){
+        }else if($sql->execute([$_POST['name'],$_POST['price']])){
             echo '<font color="red">追加に成功しました。</font>';
         }else{
             echo '<font color="red">追加に失敗しました。</font>';
