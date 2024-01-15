@@ -10,6 +10,7 @@
 <html lang="ja">
 	<head>
     <meta http-equiv="Cache-Control" content="no-cache">
+    <link href="top.css" rel="stylesheet">
 		<meta charset="UTF-8">
 		<title>top</title>
 	</head>
