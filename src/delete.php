@@ -10,6 +10,7 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
+        <link href="css/top.css" rel="stylesheet">
 		<title>データ削除</title>
 	</head>
 	<body>
@@ -17,9 +18,9 @@
     $pdo=new PDO($connect, USER, PASS);
     $sql=$pdo->prepare('delete from tea where tea_id=?');
     if ($sql->execute([$_POST['id']])){
-        echo '削除に成功しました。';
+        echo '<h1>削除に成功しました。</h1>';
     }else{
-        echo '削除に失敗しました。';
+        echo '<h1>削除に失敗しました。</h1>';
     }
 ?>
     <br><hr><br>
