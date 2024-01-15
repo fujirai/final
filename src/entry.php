@@ -5,7 +5,7 @@
         <link href="css/entry.css" rel="stylesheet">
         <title>データ追加</title>
     </head>
-    <body backgroud="tea.jpg">
+    <body>
         <p>商品を追加します。</p>
         <form action="entry_output.php" method="post">
             お茶名<input type="text" name="name"></br>

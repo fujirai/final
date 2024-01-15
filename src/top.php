@@ -14,7 +14,7 @@
 		<meta charset="UTF-8">
 		<title>top</title>
 	</head>
-	<body backgroud="tea.jpg">
+	<body>
         <h1>日本のお茶一覧</h1>
         <hr>
         <button onclick="location.href='entry.php'">登録する</button>
