@@ -11,7 +11,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>データ更新</title>
-		<link href="css/entry.css" rel="stylesheet">
+		<link href="css/update.css" rel="stylesheet">
 	</head>
 	<body>
     <table>
