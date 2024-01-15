@@ -19,7 +19,7 @@
         <hr>
         <button onclick="location.href='entry.php'">登録する</button>
         <table>
-    <tr><th>番号</th><th>お茶名</th><th>価格</th></tr>
+    <tr><th>番号</th><th>お茶名</th><th>価格</th><th colspan="2">更新・削除</th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
     foreach ($pdo->query('select * from tea') as $row) {
@@ -27,18 +27,22 @@
         echo '<td>', $row['tea_id'], '</td>';
         echo '<td>', $row['tea_name'], '</td>';
         echo '<td>', $row['price'], '</td>';
-        echo '</tr>';
-        echo '</table>';
+        echo '<td>';
         echo '<form action="update.php" method="post">';
         echo '<input type="hidden" name="id" value="',$row['tea_id'],'">';
         echo '<button type="submit">更新</button>';
         echo '</form>';
+        echo '</td>';
+        echo '<td>';
         echo '<form action="delete.php" method="post">';
         echo '<input type="hidden" name="id" value="',$row['tea_id'],'">';
         echo '<button type="submit">削除</button>';
         echo '</form>';
+        echo '</td>';
+        echo '</tr>';
         echo "\n";
     }
 ?>
+    </table>
     </body>
 </html>
