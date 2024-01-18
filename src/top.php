@@ -16,6 +16,17 @@
 	</head>
 	<body>
         <h1>お茶一覧</h1>
+        <form action="search.php" method="post">
+        カテゴリー：<select name="cate">
+                <?php
+                $pdo=new PDO($connect, USER, PASS);
+                foreach ($pdo->query('select * from category') as $row) {
+                    echo '<option value="',$row['cate_id'],'">',$row['cate_name'],'</option>';
+                }
+                ?>
+                </select>
+                <button type="submit">検索</button>
+        </form>
         <hr>
         <button onclick="location.href='entry.php'">お茶登録</button>
         <button onclick="location.href='cate.php'">カテゴリー登録</button>
@@ -23,7 +34,7 @@
     <tr><th>番号</th><th>お茶名</th><th>価格</th><th colspan="2">更新・削除</th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
-    foreach ($pdo->query('select * from tea') as $row) {
+    foreach ($pdo->query('select * from tea,category') as $row) {
         echo '<tr>';
         echo '<td>', $row['tea_id'], '</td>';
         echo '<td>', $row['tea_name'], '</td>';

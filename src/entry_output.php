@@ -28,7 +28,7 @@
             echo '<h1>商品名を入力してください。</h1>';
         }else if(!preg_match('/^[0-9]+$/', $_POST['price'])) {
             echo '<h1>商品価格を整数で入力してください。</h1>';
-        }else if($sql->execute([$_POST['name'],$_POST['price'],$_POST['cate_id']])){
+        }else if($sql->execute([$_POST['name'],$_POST['price'],$_POST['cate']])){
             echo '<h1>追加に成功しました。</h1>';
         }else{
             echo '<h1>追加に失敗しました。</h1>';
