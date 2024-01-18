@@ -18,7 +18,9 @@
         <form action="entry_output.php" method="post">
             <p>お茶名：<input type="text" name="name"></p>
             <p>価格：<input type="text" name="price"></p>
-            カテゴリー：<select name="cate">
+            <div class="box">
+            <h2>カテゴリー：</h2>
+            <select name="cate">
                 <?php
                 $pdo=new PDO($connect, USER, PASS);
                 foreach ($pdo->query('select * from category') as $row) {
@@ -26,6 +28,8 @@
                 }
                 ?>
                 </select>
+            </div>
+            <br>
             <button type="submit">追加</button>
         </form>
     </body>

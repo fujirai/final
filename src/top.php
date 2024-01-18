@@ -16,6 +16,7 @@
 	</head>
 	<body>
         <h1>お茶一覧</h1>
+        <div class="box">
         <form action="search.php" method="post">
         カテゴリー：<select name="cate">
                 <?php
@@ -27,6 +28,7 @@
                 </select>
                 <button type="submit">検索</button>
         </form>
+        </div>
         <hr>
         <button onclick="location.href='entry.php'">お茶登録</button>
         <button onclick="location.href='cate.php'">カテゴリー登録</button>

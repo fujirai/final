@@ -12,6 +12,10 @@ h1{
     color: #fefefe;
 }
 
+h2{
+    color: #fefefe;
+}
+
 p {
     color:white;
     font-size: 25px;
@@ -42,3 +46,8 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+.box select{
+    border: 1px solid;
+    font-size: 30px;
+   }
