@@ -15,9 +15,10 @@
 		<title>top</title>
 	</head>
 	<body>
-        <h1>日本のお茶一覧</h1>
+        <h1>お茶一覧</h1>
         <hr>
-        <button onclick="location.href='entry.php'">登録する</button>
+        <button onclick="location.href='entry.php'">お茶登録</button>
+        <button onclick="location.href='cate.php'">カテゴリー登録</button>
         <table>
     <tr><th>番号</th><th>お茶名</th><th>価格</th><th colspan="2">更新・削除</th></tr>
 <?php

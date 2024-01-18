@@ -23,12 +23,10 @@
 <body>
     <?php
         $pdo = new PDO($connect, USER, PASS);
-        $sql=$pdo->prepare('insert into tea(tea_name, price,cate_id) values(?, ?, ?)');
-        if(empty($_POST['name'])){
+        $sql=$pdo->prepare('insert into category(cate_name) values( ?)');
+        if(empty($_POST['cate'])){
             echo '<h1>商品名を入力してください。</h1>';
-        }else if(!preg_match('/^[0-9]+$/', $_POST['price'])) {
-            echo '<h1>商品価格を整数で入力してください。</h1>';
-        }else if($sql->execute([$_POST['name'],$_POST['price'],$_POST['cate_id']])){
+        }else if($sql->execute([$_POST['cate']])){
             echo '<h1>追加に成功しました。</h1>';
         }else{
             echo '<h1>追加に失敗しました。</h1>';
@@ -36,20 +34,18 @@
     ?>
     <br><hr><br>
     <table>
-        <tr><th>番号</th><th>お茶名</th><th>価格</th><th>カテゴリ名</th></tr>
+        <tr><th>番号</th><th>カテゴリー名</th></tr>
     <?php
-        foreach($pdo->query('select * from tea,category') as $row) {
+        foreach($pdo->query('select * from category') as $row) {
             echo '<tr>';
-            echo '<td>',$row['tea_id'],'</td>';
-            echo '<td>',$row['tea_name'],'</td>';
-            echo '<td>',$row['price'], '</td>';
-            echo '<td>',$row['cate_name'], '</td>';
+            echo '<td>',$row['cate_id'],'</td>';
+            echo '<td>',$row['cate_name'],'</td>';
             echo '</tr>';
             echo "\n";
         }
     ?>
     </table>
-    <form action="entry.php">
+    <form action="cate.php">
         <button type="submit">戻る</button>
     </form>
     <button onclick="location.href='top.php'">トップへ戻る</button>
