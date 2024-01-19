@@ -16,6 +16,11 @@ h2{
     color: #fefefe;
 }
 
+span{
+    font-size:25px;
+    color:white;
+}
+
 p {
     color:white;
     font-size: 25px;
@@ -49,5 +54,6 @@ button:hover {
 
 .box select{
     border: 1px solid;
-    font-size: 30px;
+    font-size: 20px;
+    width:75px;
    }

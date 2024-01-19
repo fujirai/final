@@ -26,7 +26,7 @@
                 }
                 ?>
                 </select>
-                <button type="submit">検索</button>
+                <button type="submit">カテゴリー検索</button>
         </form>
         </div>
         <hr>

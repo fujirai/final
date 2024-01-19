@@ -19,7 +19,7 @@
             <p>お茶名：<input type="text" name="name"></p>
             <p>価格：<input type="text" name="price"></p>
             <div class="box">
-            <h2>カテゴリー：</h2>
+            <span>カテゴリー：</span>
             <select name="cate">
                 <?php
                 $pdo=new PDO($connect, USER, PASS);
