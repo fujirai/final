@@ -38,7 +38,7 @@
     <table>
         <tr><th>番号</th><th>お茶名</th><th>価格</th><th>カテゴリ名</th></tr>
     <?php
-        foreach($pdo->query('select * from tea,category') as $row) {
+        foreach($pdo->query('select * from tea,category where tea.cate_id = category.cate_id') as $row) {
             echo '<tr>';
             echo '<td>',$row['tea_id'],'</td>';
             echo '<td>',$row['tea_name'],'</td>';
